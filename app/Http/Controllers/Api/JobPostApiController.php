@@ -14,7 +14,10 @@ class JobPostApiController extends Controller
     // GET /api/job-posts
     public function index()
     {
-        $jobPosts = JobPost::with('category')->latest()->paginate(10);
+        $jobPosts = JobPost::select('id', 'title', 'dateline')
+    ->with('category:id,name') // only get id and name from category
+    ->latest()
+    ->paginate(10);
 
         return response()->json([
             'status' => true,
