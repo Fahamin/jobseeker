@@ -1,5 +1,4 @@
-@extends('components.layout')
-
+@extends('layouts.app')
 @section('content')
 <div class="max-w-2xl mx-auto">
     <div class="bg-white rounded-lg shadow p-6">
