@@ -5,7 +5,8 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\JobPostController;
-
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\ResultController;
 
 
 
@@ -23,8 +24,16 @@ Route::middleware('auth')->group(function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('questions', QuestionController::class);
+
+});
+
 Route::resource('categories', CategoryController::class);
 
 Route::resource('job_posts', JobPostController::class);
+
+    Route::get('/results', [ResultController::class, 'index'])->name('results.index');
+    Route::get('/results/{id}', [ResultController::class, 'show'])->name('results.show');
 
 require __DIR__.'/auth.php';

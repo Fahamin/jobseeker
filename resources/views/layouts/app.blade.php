@@ -91,8 +91,8 @@
                     </a>
                 </li>
                 <li class="list-group-item bg-dark text-white border-0">
-                    <a href="#" class="text-white text-decoration-none d-flex align-items-center">
-                        <i class="fas fa-graduation-cap me-2"></i> Education
+                    <a href="{{ route('admin.questions.index') }}" class="text-white text-decoration-none d-flex align-items-center">
+                        <i class="fas fa-graduation-cap me-2"></i> Quize
                     </a>
                 </li>
                 <li class="list-group-item bg-dark text-white border-0">
