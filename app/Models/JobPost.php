@@ -33,9 +33,9 @@ class JobPost extends Model
     ];
 
     // Relationship with Category
-    public function category()
+     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     // Scopes for common queries

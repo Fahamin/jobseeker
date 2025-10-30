@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 
-class AuthController extends Controller
+class AuthApiController extends Controller
 {
     // Register
     public function register(Request $request)

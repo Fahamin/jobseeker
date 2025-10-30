@@ -8,7 +8,7 @@ use App\Models\ExamResult;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ExamController extends Controller
+class ExamApiController extends Controller
 {
     public function getExamQuestions()
     {
